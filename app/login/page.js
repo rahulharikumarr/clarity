@@ -20,7 +20,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Logged in successfully!");
-      router.push("/dashboard"); // Redirect to dashboard
+      router.push("/journals"); // Redirect to dashboard
     } catch (error) {
       console.error("Login error:", error.message);
       alert(error.message);
@@ -28,45 +28,59 @@ export default function Login() {
   }
 
   return (
-    // JSX remains the same as before
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center text-gray-800">Log In</h1>
-        <form onSubmit={handleSubmit} className="mt-6">
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-600 font-medium">
-              Email
+    <div className="min-h-screen flex items-center justify-center relative">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/room.jpeg"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Login Card */}
+      <div className="relative bg-white shadow-2xl rounded-lg p-8 w-full max-w-md">
+        <h1 className="text-4xl font-extrabold text-center text-gray-800">
+          Welcome Back
+        </h1>
+        <p className="text-center text-gray-600 mt-2">
+          Log in to access your journaling journey
+        </p>
+        <form onSubmit={handleSubmit} className="mt-8">
+          <div className="mb-6">
+            <label htmlFor="email" className="block text-lg font-medium text-gray-700">
+              Email Address
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
               placeholder="Enter your email"
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-600 font-medium">
+            <label htmlFor="password" className="block text-lg font-medium text-gray-700">
               Password
             </label>
             <input
               type="password"
               id="password"
               name="password"
-              className="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
               placeholder="Enter your password"
             />
           </div>
           <button
             type="submit"
-            className="w-full px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+            className="w-full px-4 py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition"
           >
             Log In
           </button>
         </form>
-        <p className="mt-4 text-center text-sm text-gray-600">
+        <p className="mt-6 text-center text-gray-600">
           Don't have an account?{" "}
-          <a href="/signup" className="text-green-500 hover:underline">
+          <a href="/signup" className="text-indigo-500 hover:underline font-bold">
             Sign Up
           </a>
         </p>

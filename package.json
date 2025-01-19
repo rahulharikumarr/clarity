@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@huggingface/inference": "^3.0.0",
     "firebase": "^11.2.0",
     "next": "15.1.5",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

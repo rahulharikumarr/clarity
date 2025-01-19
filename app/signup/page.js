@@ -33,10 +33,18 @@ export default function Signup() {
   }
 
   return (
-    // JSX remains the same as before
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center text-gray-800">Sign Up</h1>
+    <div
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: `url('/room.jpeg')`, // Replace with your image path
+      }}
+    >
+      {/* Signup Form Container */}
+      <div className="bg-white bg-opacity-90 shadow-xl rounded-lg p-8 w-full max-w-md">
+        <h1 className="text-3xl font-extrabold text-center text-gray-800">Sign Up</h1>
+        <p className="text-center text-gray-600 mt-2 text-sm">
+          Create your account to start journaling.
+        </p>
         <form onSubmit={handleSubmit} className="mt-6">
           {/* Email Input */}
           <div className="mb-4">
@@ -47,7 +55,7 @@ export default function Signup() {
               type="email"
               id="email"
               name="email"
-              className="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your email"
             />
           </div>
@@ -60,7 +68,7 @@ export default function Signup() {
               type="password"
               id="password"
               name="password"
-              className="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your password"
             />
           </div>
@@ -76,20 +84,20 @@ export default function Signup() {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              className="w-full mt-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Confirm your password"
             />
           </div>
           <button
             type="submit"
-            className="w-full px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+            className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
           >
             Sign Up
           </button>
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <a href="/login" className="text-green-500 hover:underline">
+          <a href="/login" className="text-blue-500 hover:underline">
             Log in
           </a>
         </p>

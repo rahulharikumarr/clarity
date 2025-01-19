@@ -1,126 +1,68 @@
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-green-50 via-white to-green-100 min-h-screen">
+    <div className="font-sans">
       {/* Hero Section */}
-      <header className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-teal-500 to-blue-400 opacity-80 z-[-1]"></div>
-        <div className="container mx-auto px-6 lg:px-12 py-24 text-center text-black">
-          <h1 className="text-5xl font-extrabold leading-tight sm:text-6xl">
-            Keep Track of Your Thoughts<br />
-            Anywhere. Anytime
+      <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/sunset.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60"></div> {/* Subtle overlay */}
+        <div className="relative z-10 text-center text-white px-6 max-w-5xl">
+          {/* Main Title and CTA */}
+          <h1 className="text-6xl font-extrabold leading-tight sm:text-8xl drop-shadow-md">
+            Your Thoughts, <br />
+            Perfectly Captured.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl max-w-3xl mx-auto">
-            Clarity harnesses the power of AI to turn your quick voice recordings<br />
-            into beautifully crafted entries. Start your journey of self-discovery now!
+          <p className="mt-8 text-xl sm:text-2xl font-bold">
+            Speak your mind, save your moments, and let Clarity do the rest.
           </p>
-          <div className="mt-8">
+          <div className="mt-12">
             <a
               href="/login"
-              className="px-8 py-3 bg-white text-green-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition"
+              className="px-12 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xl font-semibold shadow-lg hover:opacity-90 transition transform hover:scale-105"
             >
-              Get Started for Free
+              Create your journal
             </a>
+          </div>
+
+          {/* Features Section */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Feature 1 */}
+            <div
+              className="p-8 rounded-xl shadow-lg transition transform hover:-translate-y-2 hover:scale-105"
+              style={{
+                backgroundColor: "#FFFFFF", // Vibrant blue background
+                color: "#F97316", // White text
+              }}
+            >
+              <h3 className="text-3xl font-bold mb-4">🎤 Voice Journaling</h3>
+              <p className="text-lg">Speak freely, and we’ll save your thoughts with ease.</p>
+            </div>
+
+            {/* Feature 2 */}
+            <div
+              className="p-8 rounded-xl shadow-lg transition transform hover:-translate-y-2 hover:scale-105"
+              style={{
+                backgroundColor: "#FFFFFF", // Vibrant orange background
+                color: "#F97316", // White text
+              }}
+            >
+              <h3 className="text-3xl font-bold mb-4">😊 Instant Emojis</h3>
+              <p className="text-lg">Capture your mood instantly with an assigned smiley.</p>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Features Section */}
-      <section className="container mx-auto px-6 lg:px-12 py-16">
-        <h2 className="text-4xl font-bold text-center text-gray-800">Why Choose Voice-to-Journal?</h2>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="p-6 bg-white rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <div className="text-green-500 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m13 4V8m-6 8V4"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold">Voice-to-Journal Conversion</h3>
-            <p className="text-gray-600 mt-2">
-              Speak your thoughts and let AI turn them into cohesive, structured journals.
-            </p>
-          </div>
-          {/* Feature 2 */}
-          <div className="p-6 bg-white rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <div className="text-green-500 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold">Emotion Analysis</h3>
-            <p className="text-gray-600 mt-2">
-              Track your emotions and gain insights into your mental health journey.
-            </p>
-          </div>
-          {/* Feature 3 */}
-          <div className="p-6 bg-white rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow">
-            <div className="text-green-500 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold">Thematic Filters</h3>
-            <p className="text-gray-600 mt-2">
-              Discover recurring themes like gratitude or productivity in your entries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-16 bg-gradient-to-br from-teal-500 to-green-500 text-white">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-3xl font-bold">Ready to Start Your Journey?</h2>
-          <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Join thousands of users discovering their emotional trends and improving mindfulness with Voice-to-Journal.
-          </p>
-          <div className="mt-6">
-            <a
-              href="/login"
-              className="px-8 py-3 bg-white text-teal-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition"
-            >
-              Create Your First Journal
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="py-6 bg-gray-900 text-gray-400 text-center">
-        <p>&copy; 2025 Clarity. Journaling made simple and beautiful.</p>
+      <footer className="py-8 bg-gray-800 text-gray-400 text-center">
+        <p className="text-lg">
+          &copy; {new Date().getFullYear()} clarity. for the mind, and soul.
+        </p>
       </footer>
     </div>
   );
