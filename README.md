@@ -2,16 +2,13 @@ Clarity is a journaling app that allows users to keep track of their feelings, m
 
 ## How to use
 
-First, run the development server:
+Clone the repository onto your local, cd into the clarity folder.
+
+To run:
+run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) , create an account and journal away!
